@@ -903,9 +903,9 @@ public:
   /*Talent*/lvl >= 20 ? InitSpellMap(MIND_FLAY_1) : RemoveSpell(MIND_FLAY_1);
   /*Talent*/lvl >= 50 ? InitSpellMap(VAMPIRIC_TOUCH_1) : RemoveSpell(VAMPIRIC_TOUCH_1);
 
-            HEAL = GetSpell(GREATER_HEAL_1) ? GetSpell(GREATER_HEAL_1) :
+  HEAL = GREATER_HEAL_4; /* GetSpell(GREATER_HEAL_1) ? GetSpell(GREATER_HEAL_1) :
                 GetSpell(NORMAL_HEAL_1) ? GetSpell(NORMAL_HEAL_1) :
-                GetSpell(LESSER_HEAL_1);
+                GetSpell(LESSER_HEAL_1);*/
         }
 
         void ApplyClassPassives()
@@ -1014,7 +1014,15 @@ public:
             SW_DEATH_1                          = 32379,
             DEVOURING_PLAGUE_1                  = 2944,
   /*Talent*/MIND_FLAY_1                         = 15407,
-  /*Talent*/VAMPIRIC_TOUCH_1                    = 34914
+  /*Talent*/VAMPIRIC_TOUCH_1                    = 34914,
+			GREATER_HEAL_2 = 10963, /*lvl 46*/
+			GREATER_HEAL_3 = 10964, /*lvl 52*/
+			GREATER_HEAL_4 = 10965, /*lvl 58*/
+			RENEW_2 = 6074, /*lvl 14*/
+			RENEW_3 = 6075,/*lvl 20*/
+			RENEW_4 = 6076,/*lvl 26*/
+			RENEW_5 = 6077,/*lvl 32*/
+			RENEW_6 = 6078/*lvl 38*/
         };
         enum PriestPassives
         {
