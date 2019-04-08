@@ -1304,7 +1304,7 @@ void bot_ai::_listAuras(Player* player, Unit* unit) const
 void bot_minion_ai::SetStats(bool force, bool shapeshift)
 {
     uint8 myclass = _botclass;
-    uint8 mylevel = std::min<uint8>(master->getLevel(), 80);
+	uint8 mylevel = 80; //std::min<uint8>(master->getLevel(), 80);
     if (myclass == BOT_CLASS_DRUID && GetBotStance() != BOT_STANCE_NONE)
         myclass = GetBotStance();
     if (myclass != DRUID_BEAR_FORM && myclass != DRUID_CAT_FORM && (master->isDead() || (!shouldUpdateStats && !force)))
@@ -1719,7 +1719,7 @@ void bot_minion_ai::SetStats(bool force, bool shapeshift)
 
 void bot_pet_ai::SetStats(bool force, bool /*unk*/)
 {
-    uint8 mylevel = m_creatureOwner->getLevel();
+	uint8 mylevel = 80; // m_creatureOwner->getLevel();
     uint8 petType = GetPetType(me);
     if (petType == PET_TYPE_NONE || petType >= MAX_PET_TYPES) return;
     if (!shouldUpdateStats && !force) return;
